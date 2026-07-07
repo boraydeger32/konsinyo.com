@@ -1,18 +1,18 @@
+import Link from "next/link";
+
 const footerLinks = {
   Urun: [
-    { label: "Ozellikler", href: "#ozellikler" },
-    { label: "Fiyatlar", href: "#fiyatlar" },
-    { label: "Nasil Calisir", href: "#nasil-calisir" },
+    { label: "Ozellikler", href: "/#ozellikler" },
+    { label: "Fiyatlar", href: "/fiyatlar" },
+    { label: "Nasil Calisir", href: "/#nasil-calisir" },
   ],
   Sirket: [
-    { label: "Hakkimizda", href: "#ekibimiz" },
-    { label: "Ekibimiz", href: "#ekibimiz" },
-    { label: "Blog", href: "#" },
+    { label: "Hakkimizda", href: "/hakkimizda" },
+    { label: "Blog", href: "/blog" },
   ],
   Destek: [
-    { label: "Iletisim", href: "#iletisim" },
-    { label: "SSS", href: "#sss" },
-    { label: "Yardim Merkezi", href: "#" },
+    { label: "Iletisim", href: "/iletisim" },
+    { label: "SSS", href: "/#sss" },
   ],
   Yasal: [
     { label: "KVKK", href: "#" },
@@ -27,10 +27,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
           <div className="col-span-2 md:col-span-1">
-            <a href="#" className="text-2xl font-extrabold tracking-tight">
+            <Link href="/" className="text-2xl font-extrabold tracking-tight">
               <span className="text-primary">K</span>
               <span className="text-white">onsinyo</span>
-            </a>
+            </Link>
             <p className="text-sm text-slate-400 leading-relaxed mt-3 max-w-[260px]">
               Kucuk ureticiler ile perakende dukkanlari bulusturan konsinye
               ticaret platformu.
@@ -45,12 +45,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-sm text-slate-400 hover:text-white transition-colors"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,7 +58,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/[0.08] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/[0.06] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[13px] text-slate-500">
             &copy; 2026 Konsinyo. Tum haklari saklidir.
           </p>
