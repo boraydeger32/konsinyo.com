@@ -22,18 +22,10 @@ export default function Contact() {
     };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        setStatus("sent");
-        (e.target as HTMLFormElement).reset();
-      } else {
-        setStatus("error");
-      }
+      // TODO: Backend eklendiginde buraya API call eklenecek
+      console.log("Iletisim formu:", data);
+      setStatus("sent");
+      (e.target as HTMLFormElement).reset();
     } catch {
       setStatus("error");
     }
